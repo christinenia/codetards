@@ -80,6 +80,7 @@
 $(document).ready(function() {
 
 //this displays the numbers on the Result Window 
+
 //theres probably a way to loop this or use the class to make it a function that works for all the buttons
 
 $('button#button-1').click(function(){
@@ -87,13 +88,38 @@ $('button#button-1').click(function(){
 });
 $('button#button-2').click(function(){
   $('#result').append('2');
+});
+$('button#button-3').click(function(){
+  $('#result').append('3');
+});
+$('button#button-4').click(function(){
+  $('#result').append('4');
+});
+$('button#button-5').click(function(){
+  $('#result').append('5');
+});
+$('button#button-6').click(function(){
+  $('#result').append('6');
+});
+$('button#button-7').click(function(){
+  $('#result').append('7');
+});
+$('button#button-8').click(function(){
+  $('#result').append('8');
+});
+$('button#button-9').click(function(){
+  $('#result').append('9');
+});
+$('button#button-0').click(function(){
+  $('#result').append('0');
+});
 
 //variables that store the entry
 
 var firstEntry = $('#result').text();
 var secondEntry = $('#result').text(); //stores secondEntry
 
-});
+
 
 //ADDING 1's and 2s
 
@@ -102,7 +128,7 @@ $('#button-plus').click(function(){ //when plus is clicked
   $('#result').empty(); //empty's result container
   console.log(firstEntry); 
 
-  $('#button-equal').click(function(){ 
+  $('#button-equal').click(function(){ // when equal is clicked
     var secondEntry = $('#result').text(); //stores secondEntry
     console.log(secondEntry)
     // $('#result').text(''); //empty's result container
