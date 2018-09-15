@@ -69,27 +69,21 @@
       </div>
     </div>
   </div>
+ 
 
 <script type="text/javascript">
-
-
 //grab class from every number botton
 //with that class pull the value of each button
 //make each button equal that number
-
 $(document).ready(function() {
-
 //this displays the numbers on the Result Window 
-
 //theres probably a way to loop this or use the class to make it a function that works for all the buttons
-
 function numbers(button){
   $(button).click(function(){
     var num = button.text();
   $('#result').append(num);
 });
 }
-
 numbers($('#button-1'));
 numbers($('#button-2'));
 numbers($('#button-3'));
@@ -100,8 +94,6 @@ numbers($('#button-7'));
 numbers($('#button-8'));
 numbers($('#button-9'));
 numbers($('#button-0'));
-
-
 // $('button#button-1').click(function(){
 //   $('#result').append('1');
 // });
@@ -132,27 +124,22 @@ numbers($('#button-0'));
 // $('button#button-0').click(function(){
 //   $('#result').append('0');
 // });
-
 //variables that store the entry
-
 var firstEntry = $('#result').text();
 var secondEntry = $('#result').text(); //stores secondEntry
-
 function operator(button){
   $(button).click(function(){ //when plus is clicked
   var firstEntry = $('#result').text(); //store the resultText into firstEntry
   $('#result').empty(); //empty's result container
-  console.log(firstEntry); 
-
+  document.getElementById('first-number').innerHTML = firstEntry;
   $('#button-equal').click(function(){ // when equal is clicked
     var secondEntry = $('#result').text(); //stores secondEntry
-    console.log(secondEntry)
+    document.getElementById('second-number').innerHTML = secondEntry;
     // $('#result').text(''); //empty's result container
     var a = parseInt(firstEntry); //turns the first set of numbers into an integer and assigns it to variable a
-
     var b = parseInt(secondEntry); //turns the second set of numbers into an integer and assigns it to variable b
     console.log("answerB" + b);
-    console.log(button.text());
+    document.getElementById('operator').innerHTML = button.text();
     if (button.text() === "+"){
       var answer = a + b; // adds a and b and assigns to answer
       console.log(answer)
@@ -180,171 +167,119 @@ function operator(button){
     }
   });
 });
-
 }
-
 operator($('#button-plus'));
-
 operator($('#button-minus'));
-
 operator($('#button-multiply'));
-
 operator($('#button-divide'));
-
 operator($('#button-power'));
-
 //ADDING 1's and 2s
-
-
 // $('#button-plus').click(function(){ //when plus is clicked
 //   var firstEntry = $('#result').text(); //store the resultText into firstEntry
 //   $('#result').empty(); //empty's result container
 //   console.log(firstEntry); 
-
 //   $('#button-equal').click(function(){ // when equal is clicked
 //     var secondEntry = $('#result').text(); //stores secondEntry
 //     console.log(secondEntry)
 //     // $('#result').text(''); //empty's result container
 //  var a = parseInt(firstEntry); //turns the first set of numbers into an integer and assigns it to variable a
-
-
-
 //     var b = parseInt(secondEntry); //turns the second set of numbers into an integer and assigns it to variable b
 //     console.log("answerB" + b);
-
 //     var answer = a + b; // adds a and b and assigns to answer
 //     console.log(answer)
 //     $('#result').text(answer); //pushes the answer to the result window
 //   });
 // }); 
-
 //SUBTRACT
 // $('#button-minus').click(function(){ //when plus is clicked
 //   var firstEntry = $('#result').text(); //store the resultText into firstEntry
 //   $('#result').empty(); //empty's result container
 //   console.log(firstEntry); 
-
 //   $('#button-equal').click(function(){ // when equal is clicked
 //     var secondEntry = $('#result').text(); //stores secondEntry
 //     console.log(secondEntry)
 //     // $('#result').text(''); //empty's result container
-
-
 //     var a = parseInt(firstEntry); //turns the first set of numbers into an integer and assigns it to variable a
 //     console.log("answerA" + a);
-
-
 //     var b = parseInt(secondEntry); //turns the second set of numbers into an integer and assigns it to variable b
 //     console.log("answerB" + b);
-
 //     var answer = a - b; // adds a and b and assigns to answer
 //     console.log(answer)
 //     $('#result').text(answer); //pushes the answer to the result window
 //   });
 // });
-
 // //Multiply
 // $('#button-multiply').click(function(){ //when plus is clicked
 //   var firstEntry = $('#result').text(); //store the resultText into firstEntry
 //   $('#result').empty(); //empty's result container
 //   console.log(firstEntry); 
-
 //   $('#button-equal').click(function(){ // when equal is clicked
 //     var secondEntry = $('#result').text(); //stores secondEntry
 //     console.log(secondEntry)
 //     // $('#result').text(''); //empty's result container
-
-
 //     var a = parseInt(firstEntry); //turns the first set of numbers into an integer and assigns it to variable a
 //     console.log("answerA" + a);
-
-
 //     var b = parseInt(secondEntry); //turns the second set of numbers into an integer and assigns it to variable b
 //     console.log("answerB" + b);
-
 //     var answer = a * b; // adds a and b and assigns to answer
 //     console.log(answer)
 //     $('#result').text(answer); //pushes the answer to the result window
 //   });
 // });
-
-
 // //Divide
 // $('#button-divide').click(function(){ //when plus is clicked
 //   var firstEntry = $('#result').text(); //store the resultText into firstEntry
 //   $('#result').empty(); //empty's result container
 //   console.log(firstEntry); 
-
 //   $('#button-equal').click(function(){ // when equal is clicked
 //     var secondEntry = $('#result').text(); //stores secondEntry
 //     console.log(secondEntry)
 //     // $('#result').text(''); //empty's result container
-
-
 //     var a = parseInt(firstEntry); //turns the first set of numbers into an integer and assigns it to variable a
 //     console.log("answerA" + a);
-
-
 //     var b = parseInt(secondEntry); //turns the second set of numbers into an integer and assigns it to variable b
 //     console.log("answerB" + b);
-
 //     var answer = (a / b) >>0; // adds a and b and assigns to answer
 //     console.log(answer)
 //     $('#result').text(answer); //pushes the answer to the result window
 //   });
 // });
-
 // //Exponent
-
 // $('#button-power').click(function(){ //when plus is clicked
 //   var firstEntry = $('#result').text(); //store the resultText into firstEntry
 //   $('#result').empty(); //empty's result container
 //   console.log(firstEntry); 
-
 //   $('#button-equal').click(function(){ // when equal is clicked
 //     var secondEntry = $('#result').text(); //stores secondEntry
 //     console.log(secondEntry)
 //     // $('#result').text(''); //empty's result container
-
-
 //     var a = parseInt(firstEntry); //turns the first set of numbers into an integer and assigns it to variable a
 //     console.log("answerA" + a);
-
-
 //     var b = parseInt(secondEntry); //turns the second set of numbers into an integer and assigns it to variable b
 //     console.log("answerB" + b);
-
 //     var answer = (Math.pow(a,b)) // adds a and b and assigns to answer
 //     console.log(answer)
 //     $('#result').text(answer); //pushes the answer to the result window
 //   });
 // });
-
 // //Clear
 // // $('#button-clear').click(function(){ //when plus is clicked
 // //   $('#result').empty(); //empty's result container
 // // });
-
 // //store first numbers clicked and display on the result window (append)
 // //store operand 
 // //store seconds number clicked
 // //if function equals an operand then run the first numbers and second numbers and put the result into a var and display in result
-
 function calculator(button){
   $(button).click(function(){ //when plus is clicked
   $('#result').empty(); //empty's result container
+  $("#first-number").empty();
+  $("#second-number").empty();
+  $("#operator").empty();
 });
 }
 calculator($('#button-clear'));
-
 });
-
-
-
-// Your code here...
-
-
-
 
 </script>
 
