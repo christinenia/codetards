@@ -72,12 +72,77 @@
 
 <script type="text/javascript">
 
+
+//grab class from every number botton
+//with that class pull the value of each button
+//make each button equal that number
+
 $(document).ready(function() {
+var one = $('[value="1"]').text(); //assiging variables with buttons
+var one = 1;
+console.log(one);
+// $('#result').text(one);
+var two = $('[value="2"]').text();
+console.log(two);
+var two = 2;
+var three = $('[value="3"]').text();
+console.log(three);
+var three = 3;
+
+$('button#button-1').click(function(){
+  $('#result').append('1');
+});
+$('button#button-2').click(function(){
+  $('#result').append('2');
+
+var firstEntry = $('#result').text();
+var secondEntry = $('#result').text(); //stores secondEntry
+
+});
+// console.log(firstEntry);
+// var sum = parseInt(firstEntry) + parseInt(firstEntry);
+// console.log(sum);
+
+$('#button-plus').click(function(){ //when plus is clicked
+  var firstEntry = $('#result').text(); //store the resultText into firstEntry
+  $('#result').empty(); //empty's result container
+  console.log(firstEntry); 
+
+  $('#button-equal').click(function(){ 
+    var secondEntry = $('#result').text(); //stores secondEntry
+    console.log(secondEntry)
+    // $('#result').text(''); //empty's result container
+
+
+    var a = parseInt(firstEntry);
+    console.log("answerA" + a);
+
+
+    var b = parseInt(secondEntry);
+    console.log("answerB" + b);
+
+    var answer = a + b;
+    console.log(answer)
+    $('#result').text(answer);
+  });
+});
+
+
+//store first numbers clicked and display on the result window (append)
+//store operand 
+//store seconds number clicked
+//if function equals an operand then run the first numbers and second numbers and put the result into a var and display in result
+
+
+
+});
+
+
 
 // Your code here...
 
 
-});
+
 
 </script>
 
