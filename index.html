@@ -83,36 +83,55 @@ $(document).ready(function() {
 
 //theres probably a way to loop this or use the class to make it a function that works for all the buttons
 
-$('button#button-1').click(function(){
-  $('#result').append('1');
+function numbers(button){
+  $(button).click(function(){
+    var num = button.text();
+  $('#result').append(num);
 });
-$('button#button-2').click(function(){
-  $('#result').append('2');
-});
-$('button#button-3').click(function(){
-  $('#result').append('3');
-});
-$('button#button-4').click(function(){
-  $('#result').append('4');
-});
-$('button#button-5').click(function(){
-  $('#result').append('5');
-});
-$('button#button-6').click(function(){
-  $('#result').append('6');
-});
-$('button#button-7').click(function(){
-  $('#result').append('7');
-});
-$('button#button-8').click(function(){
-  $('#result').append('8');
-});
-$('button#button-9').click(function(){
-  $('#result').append('9');
-});
-$('button#button-0').click(function(){
-  $('#result').append('0');
-});
+}
+
+numbers($('#button-1'));
+numbers($('#button-2'));
+numbers($('#button-3'));
+numbers($('#button-4'));
+numbers($('#button-5'));
+numbers($('#button-6'));
+numbers($('#button-7'));
+numbers($('#button-8'));
+numbers($('#button-9'));
+numbers($('#button-0'));
+
+
+// $('button#button-1').click(function(){
+//   $('#result').append('1');
+// });
+// $('button#button-2').click(function(){
+//   $('#result').append('2');
+// });
+// $('button#button-3').click(function(){
+//   $('#result').append('3');
+// });
+// $('button#button-4').click(function(){
+//   $('#result').append('4');
+// });
+// $('button#button-5').click(function(){
+//   $('#result').append('5');
+// });
+// $('button#button-6').click(function(){
+//   $('#result').append('6');
+// });
+// $('button#button-7').click(function(){
+//   $('#result').append('7');
+// });
+// $('button#button-8').click(function(){
+//   $('#result').append('8');
+// });
+// $('button#button-9').click(function(){
+//   $('#result').append('9');
+// });
+// $('button#button-0').click(function(){
+//   $('#result').append('0');
+// });
 
 //variables that store the entry
 
