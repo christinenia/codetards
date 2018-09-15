@@ -78,16 +78,9 @@
 //make each button equal that number
 
 $(document).ready(function() {
-var one = $('[value="1"]').text(); //assiging variables with buttons
-var one = 1;
-console.log(one);
-// $('#result').text(one);
-var two = $('[value="2"]').text();
-console.log(two);
-var two = 2;
-var three = $('[value="3"]').text();
-console.log(three);
-var three = 3;
+
+//this displays the numbers on the Result Window 
+//theres probably a way to loop this or use the class to make it a function that works for all the buttons
 
 $('button#button-1').click(function(){
   $('#result').append('1');
@@ -95,13 +88,14 @@ $('button#button-1').click(function(){
 $('button#button-2').click(function(){
   $('#result').append('2');
 
+//variables that store the entry
+
 var firstEntry = $('#result').text();
 var secondEntry = $('#result').text(); //stores secondEntry
 
 });
-// console.log(firstEntry);
-// var sum = parseInt(firstEntry) + parseInt(firstEntry);
-// console.log(sum);
+
+//ADDING 1's and 2s
 
 $('#button-plus').click(function(){ //when plus is clicked
   var firstEntry = $('#result').text(); //store the resultText into firstEntry
@@ -114,16 +108,16 @@ $('#button-plus').click(function(){ //when plus is clicked
     // $('#result').text(''); //empty's result container
 
 
-    var a = parseInt(firstEntry);
+    var a = parseInt(firstEntry); //turns the first set of numbers into an integer and assigns it to variable a
     console.log("answerA" + a);
 
 
-    var b = parseInt(secondEntry);
+    var b = parseInt(secondEntry); //turns the second set of numbers into an integer and assigns it to variable b
     console.log("answerB" + b);
 
-    var answer = a + b;
+    var answer = a + b; // adds a and b and assigns to answer
     console.log(answer)
-    $('#result').text(answer);
+    $('#result').text(answer); //pushes the answer to the result window
   });
 });
 
